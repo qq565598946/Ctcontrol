@@ -1,0 +1,262 @@
+
+html,body{
+    height: 100%;
+    font-size: 14px;
+    min-width: 1000px;
+    font-family: "微软雅黑"
+}
+
+// 常用间距大小
+.marginBottom(@n,@i:1) when(@n>=@i){
+    .mb-@{i}{
+        margin-bottom: 1px * @i;
+    }
+    .marginBottom(@n,@i+1)
+}
+ 
+.marginBottom(30);
+
+.marginRight(@n,@i:1) when(@n>=@i){
+    .mr-@{i}{
+        margin-right: 1px * @i;
+    }
+    .marginRight(@n,@i+1)
+}
+ 
+.marginRight(20);
+
+// 常用字体大小
+.fontSize(@n,@i:1) when(@n>=@i){
+    .fsz-@{i}{
+        font-size: 10px + 1px * @i;
+    }
+    .fontSize(@n,@i+1)
+}
+ 
+.fontSize(11);
+
+// 间距
+.paddingLeftRight(@n,@i:1) when(@n>=@i){
+    .plr-@{i}{
+        padding-right:  1px * @i;
+        padding-left:  1px * @i;
+    }
+    .paddingLeftRight(@n,@i+1)
+}
+
+.paddingLeftRight(25);
+
+
+.paddingTopBottom(@n,@i:1) when(@n>=@i){
+    .ptb-@{i}{
+        padding-bottom:  1px * @i;
+        padding-top:  1px * @i;
+    }
+    .paddingTopBottom(@n,@i+1)
+}
+
+.paddingTopBottom(25);
+
+
+[strong]{
+    font-weight: bold
+}
+
+/***
+ *
+ * 颜色
+ *
+ */
+.c-333{
+    color: #333
+}
+
+.c-666{
+    color: #666
+}
+.c-999{
+    color: #999
+}
+
+.c-aaa{
+    color: #aaa
+}
+.c-ccc{
+    color: #ccc
+}
+.c-eee{
+    color: #eee
+}
+.c-fff{
+    color: #fff
+}
+.c-blue{
+    color: #4285F4
+}
+.c-D65050{
+    color: #D65050
+}
+
+
+
+/***
+ *
+ * 清除浮动
+ *
+ */
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: " ";
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix{
+    *zoom: 1;
+}
+
+
+/***
+ *
+ * flex box 
+ *
+ */
+.flex{
+    display: flex
+}
+
+.flex-1{
+    flex: 1
+}
+
+.column{
+    flex-flow: column
+}
+
+.j-between{
+    justify-content: space-between
+}
+.j-center{
+    justify-content: center
+}
+.a-center{
+    align-items: center
+}
+.a-bottom{
+    align-items: flex-end
+}
+
+
+.lh-1{
+    line-height: 1;
+}
+
+/***
+ *
+ * 文字位置
+ *
+ */
+.t-center{
+    text-align: center
+}
+.t-left{
+    text-align: left
+}
+.t-right{
+    text-align: right
+}
+
+/***
+ *
+ * 浮动
+ *
+ */
+.f-left{
+    float: left;
+}
+.f-right{
+    float:right;
+}
+
+.bold{
+    font-weight: bold
+}
+
+
+
+/***
+ *
+ * 滚动条样式
+ *
+ */
+
+.horizontal-scroll::-webkit-scrollbar {
+    height: 12px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background: #a6a6a6;
+}
+
+.horizontal-thin-scroll::-webkit-scrollbar {
+    height: 5px;
+}
+
+
+.vertical-scroll::-webkit-scrollbar {
+    width: 12px;
+}
+
+.vertical-scroll::-webkit-scrollbar-thumb {
+    background: #a6a6a6;
+}
+
+
+.dls-thin-scroll::-webkit-scrollbar, 
+.thin-scroll::-webkit-scrollbar {
+    width: 5px;
+}
+
+.dls-thin-scroll::-webkit-scrollbar-thumb,
+.thin-scroll::-webkit-scrollbar-thumb {
+    background-color: #a6a6a6;
+    border-left: 2px solid transparent;
+}
+
+//分页
+.pagination {
+  float: right;margin: 10px;
+}
+
+
+// iview table 滚动条
+.ivu-table-overflowY{
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #a6a6a6;
+        border-left: 2px solid transparent;
+    }
+
+    table{
+        width:100%
+    }
+}
+
+.ivu-table-overflowX{
+    &::-webkit-scrollbar {
+        height: 12px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #a6a6a6;
+        border-left: 2px solid transparent;
+    }
+}
+
+/*居中*/
+.text-center{
+    text-align: center;
+}
+
